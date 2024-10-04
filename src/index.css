@@ -1,0 +1,32 @@
+
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --font-family-two: 'Inter', sans-serif;
+    --font-family-three: 'Sofia Sans', sans-serif;
+    --font-family-four: 'Space Mono', monospace;
+    --color-bg: #051838;
+    --color-text: #ccd6f6;
+    --color-subtext: #75E6DA;
+    --color-subheading: #48ACF0;
+    --gradient: linear-gradient(90deg, rgba(180, 41, 249, 1) 0%, rgba(38, 197, 243, 1) 100%);
+    --color-yellow: #ffdf2b;
+    --color-dark: #222;
+    --gray-dark: #343a40;
+    --cw: #e1e1e1;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --fw-thin: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 700;
+    --fs-100: 0.75rem;
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.75rem;
+    --fs-700: 2.75rem;
+    --fs-800: 3.25rem;
+    --fs-900: 4.25rem;
+}

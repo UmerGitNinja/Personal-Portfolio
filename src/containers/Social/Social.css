@@ -1,0 +1,70 @@
+.Social {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.Social a {
+    color: var(--color-subtext);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Social a:nth-child(1){
+    animation-delay: 0.2s;
+}
+.Social a:nth-child(2){
+    animation-delay: 0.4s;
+}
+.Social a:nth-child(3){
+    animation-delay: 0.6s;
+}
+.Social a:nth-child(4){
+    animation-delay: 0.8s;
+}
+.Social a:nth-child(5){
+    animation-delay: 1s;
+}
+
+
+.Social a i {
+    font-size: var(--fs-500);
+    transition: 0.2s;
+}
+
+.Social a:nth-child(1):hover>i {
+    color: #FFA408;
+}
+
+.Social a:nth-child(2):hover>i {
+    color: #0072b1;
+}
+
+.Social a:nth-child(3):hover>i {
+    color: rgb(114, 114, 114);
+}
+
+
+
+.Social a:nth-child(4):hover> i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.Social a:nth-child(5) svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-subtext);
+    transition: 0.2s;
+}
+
+.Social a:nth-child(5) svg path{
+    fill: var(--color-subtext);
+    transition: 0.2s;
+}
+
+.Social a:nth-child(5):hover svg path{
+    fill: #0caa00;
+}

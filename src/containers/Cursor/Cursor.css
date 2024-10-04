@@ -1,0 +1,35 @@
+
+
+.cursor-dot {
+  position: fixed;
+    width: 9px;
+    height: 9px;
+    background-color: var(--color-subtext);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(0, 0);
+    transition: transform 30ms ease;
+  }
+  
+  .cursor-outline {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--color-subtext);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999999;
+    transform: translate( 0, 0);
+    transition: transform 170ms ease;
+  }
+
+.hidden{
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .cursor{
+    display: none;
+  }
+}

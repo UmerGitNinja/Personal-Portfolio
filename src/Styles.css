@@ -1,0 +1,69 @@
+.main-swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .main-swiper > .swiper-wrapper {
+    transition: all 1200ms cubic-bezier(0.88, 0, 0.265, 1) 0s;
+  }
+  
+  .main-swiper-slide:not(#Projects__swiper-slide) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .main-swiper-button {
+    top: auto;
+    bottom: 10%;
+    right: 4%;
+    position: absolute;
+    height: fit-content;
+    z-index: 10000;
+    cursor: pointer;
+    rotate: 90deg;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .main-swiper-button::after{
+    display: none;
+  }
+  
+  .swiper .swiper-button-next P {
+    font-size: var(--fs-300);
+    color: var(--color-subtext);
+    font-family: var(--font-family-three);
+  
+  }
+  
+  .swiper .swiper-button-next i {
+    color: var(--color-subtext);
+    font-size: var(--fs-200);
+    transition: transform 0.2s;
+  }
+
+  .swiper .swiper-button-next.inverse p{
+    rotate: 180deg;
+  }
+
+  .swiper .swiper-button-next.inverse i{
+    transform: translateX(0);
+  }
+
+  .swiper .swiper-button-next.inverse:hover i{
+    transform: translateX(-5px);
+  }
+  
+  
+  .swiper .swiper-button-next:hover i {
+    transform: translateX(5px);
+  }

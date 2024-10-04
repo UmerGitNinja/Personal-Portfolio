@@ -1,0 +1,181 @@
+
+.Contact{
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh !important;
+    width: 100%;
+    padding: 7rem 10rem;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.Contact__content-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    gap: 2.5rem;
+}
+
+.Contact__text-area{
+    width: 100%;
+    text-align: left;
+}
+
+.Contact__text-area h1{
+    font-size: var(--fs-800);
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Contact__text-area h1 span{
+    color: var(--color-subheading);
+}
+
+.Contact__text-area p{
+    font-size: var(--fs-300);
+    margin-top: 1rem;
+}
+
+.Contact__text-area p b{
+    color: var(--color-subtext);
+    font-family: var(--font-family-three);
+}
+
+.Contact__form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-height: 500px;
+    max-width: 700px;
+    flex: 1;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.Contact__form input{
+    background: transparent;
+    border: 0.5px solid var(--color-text);
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    color: var(--color-text);
+}
+
+.Contact__form input:focus,
+.Contact__form textarea:focus{
+    background-color: #051838da;
+}
+
+
+.Contact__form input::placeholder,
+.Contact__form textarea::placeholder{
+    font-size: var(--fs-200);
+    color: var(--color-text);
+}
+
+.Contact__form textarea{
+    resize: none;
+    background: transparent;
+    border: 0.5px solid var(--color-text);
+    padding: 1rem;
+    border-radius: 5px;
+    outline: none;
+    flex: 1;
+    min-height: 150px;
+    color: var(--color-text);
+}
+
+.Contact__form-btn{
+    align-self: flex-start;
+    min-height: 3.5rem;
+}
+
+.toast-msg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+
+.checkmark {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: transparent;
+ 
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+
+@media (max-width: 900px){
+    .Contact{
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        gap: 5rem;
+    }
+    .Contact__form{
+        width: 100%;
+    }
+    .toast-msg{
+        top: 0;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-height:900px){
+    .Contact{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .Contact__form{
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+}

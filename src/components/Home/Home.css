@@ -1,0 +1,130 @@
+.Home {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+}
+
+.Home-stylings {
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.Home-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.Home__text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: min-content;
+    color: var(--color-subtext);
+    gap: 0;
+    padding-left: 1rem;
+    flex: 1;
+}
+
+.Home__text-area h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    --animate-duration: 1.2s;
+    animation-delay: 0.4s;
+}
+
+.Home__text-area h2 {
+    color: var(--color-text);
+    font-size: clamp(2.3rem, 4vw, 3rem);
+    font-family: var(--font-family-three);
+    --animate-duration: 1.2s;
+    --animate-delay: 0.1s;
+    animation-delay: 0.6s;
+}
+
+.Home__text-area h3 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semi-bold);
+    --animate-duration: 1.2s;
+    animation-delay: 0.8s;
+    font-family: var(--font-family-three);
+}
+
+.Home__text-area p {
+    font-size: var(--fs-300);
+    line-height: 2rem;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 700px;
+    --animate-duration: 1.2s;
+    animation-delay: 1s;
+}
+
+.Home__text-area-btn{
+    animation-delay: 1.2s;
+}
+
+.Home__side-svg {
+    flex: 1;
+    height: 100%;
+    display: none;
+    animation-delay: 0.4s;
+}
+
+
+
+.Home__side-svg svg {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+}
+
+.Home__side-svg svg circle {
+    animation: fadeOutUp infinite alternate;
+    animation-duration: 2s;
+}
+
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@media (min-width: 1300px) {
+    .Home__text-area{
+        gap: 0;
+    }
+    .Home__side-svg {
+        display: block;
+    }
+}
+
+@media (min-width: 1700px){
+    .Home__side-svg svg{
+        max-height: 650px;
+    }
+}
+
+@media (max-width: 700px){
+    .Home{
+        padding: 0 0.5rem ;
+    }
+}

@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  --animate-delay: 0.5s;
+  scroll-behavior: smooth;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+main {
+  width: 100%;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow-x: hidden;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s;
+}
+
+main.Main-visible {
+  opacity: 1;
+  display: block;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg);
+  opacity: 0.6;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  color: var(--color-text);
+  margin: 0;
+}
+
+h1 {
+  color: var(--color-text);
+  font-family: var(--font-family-two);
+  font-weight: var(--fw-bold);
+}
+
+.section {
+  display: flex;
+  height: 100vh;
+  z-index: 100;
+  position: relative;
+}
+
+.btn-special {
+  align-items: center;
+  appearance: none;
+  background-image: var(--gradient);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: var(--fs-300);
+}
+
+.btn-special:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.btn-special:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn-special:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.main-swiper-button.inverse {
+  flex-direction: row-reverse;
+}
+
+.main-swiper .swiper-pagination {
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  right: 2rem !important;
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 5px;
+  width: 2px;
+  margin: 0 !important;
+  background-color: var(--color-text);
+  flex: 1;
+  position: relative;
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  position: relative;
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--teal);
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-100%, -50%);
+  color: white;
+  z-index: 1000;
+  font-size: var(--fs-200);
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet:nth-child(1)::after {
+  content: "00";
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet:nth-child(2)::after {
+  content: "01";
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet:nth-child(3)::after {
+  content: "02";
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet:nth-child(4)::after {
+  content: "03";
+}
+
+.main-swiper .swiper-pagination .swiper-pagination-bullet:nth-child(5)::after {
+  content: "04";
+}
+
+.Video-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  body:has(.Main-visible) {
+    overflow-y: scroll;
+  }
+  body .Main-visible {
+    overflow-y: scroll;
+  }
+
+  :root {
+    font-size: 14px;
+  }
+
+  main {
+    background-color: var(--color-bg);
+    background-image: none;
+  }
+
+  .section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
+@media (max-height: 500px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  body:has(.Main-visible) {
+    overflow-y: scroll;
+  }
+
+  body .Main-visible {
+    overflow-y: scroll;
+  }
+  :root {
+    font-size: 14px;
+  }
+
+  main {
+    background-color: var(--color-bg);
+    background-image: none;
+  }
+
+  .section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    font-size: 17px;
+  }
+}
+
+@media (max-height: 900px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 13px;
+  }
+}
