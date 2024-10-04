@@ -4,7 +4,7 @@ import { useState, useRef, useCallback, useEffect, Profiler } from "react";
 import { Navbar, About, Projects, Contact, Home, Skills } from "./components";
 import { Cursor, Preloader } from "./containers";
 import "./App.css";
-//import "./Styles.css";
+import "./Styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
