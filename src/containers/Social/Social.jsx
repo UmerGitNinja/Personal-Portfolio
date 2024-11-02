@@ -4,7 +4,7 @@ import './Social.css'
 function Social( { Home } ) {
   return (
     <div className={`Social ${Home}`}>
-        <a href="https://github.com/UmerGitNinja/UmerGitNinja" aria-label='view github' target="_blank" className='animate__animated animate__fadeInUp'><i className="fa-brands fa-github"></i></a>
+        <a href="https://github.com/UmerGitNinja/Muhammad-Umer" aria-label='view github' target="_blank" className='animate__animated animate__fadeInUp'><i className="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/umer-khan-full-stack-dev/" aria-label='view linkedin' target="_blank"  className='animate__animated animate__fadeInUp'><i className="fa-brands fa-linkedin-in"></i></a>
         <a href="https://x.com/Umer81496923?t=2HzLCQOg8INU72A5SE7eKA&s=09" aria-label='view twitter' className='animate__animated animate__fadeInUp' target="_blank" ><i className="fa-brands fa-x-twitter"></i></a>
         <a href="https://instagram.com/umerkhann__?igshid=MzMyNGUyNmU2YQ==" aria-label='view instagram' className='animate__animated animate__fadeInUp' target="_blank" ><i className="fa-brands fa-instagram"></i></a>
