@@ -19,7 +19,7 @@ function Home({ home, swiper }) {
         <div className="Home__text-area">
           <h2 className="animate__animated animate__flipInX">Professional</h2>
           <h1 className="animate__animated animate__flipInX">
-            Front-End Developer
+            Full-Stack Developer
           </h1>
           <h3 className="animate__animated animate__flipInX">
             Elevating User Experiences with Creative UI/UX Design.
