@@ -25,7 +25,7 @@ const About = ({ swiperslide, about, swiper }) => {
           <h1>About me</h1>
           <p>
             Hello, I'm Muhammad Umer, a passionate
-            <span>Front-End Developer</span>dedicated to creating exceptional
+            <span>Full-Stack Developer</span>dedicated to creating exceptional
             web experiences.
           </p>{" "}
           <p>
