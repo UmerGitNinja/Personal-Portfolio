@@ -6,11 +6,14 @@ import "./Contact.css";
 function Contact({ swiperslidIndex }) {
   const form = useRef();
   const [toggle, settoggle] = useState(false);
-  const [disabled, setdisabled] = useState("Send Message");
+  const [disabled, setdisabled] = useState("Form Temporarily Disabled"); // Changed button text
+
+  // Temporarily commented out the email sending functionality
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
+    alert("Contact form is temporarily disabled. Please email me directly at umerdbz2k@gmail.com");
+    
+    /* emailjs
       .sendForm(
         "service_nozoddl",
         "template_1nocye6",
@@ -18,7 +21,6 @@ function Contact({ swiperslidIndex }) {
         "0jwrpgSgu-YIW4-Iw",
         settoggle(true),
         setdisabled("Sending")
-
       )
       .then(
         () => {
@@ -30,9 +32,8 @@ function Contact({ swiperslidIndex }) {
         (error) => {
           console.log(error.text);
         }
-      )
+      ) */
   };
-
 
   return (
     <div className={`section section Contact ${swiperslidIndex === 4 ? "animate__slideOutUp" : "animate__slideOutDown"}`} id="Contact">
@@ -48,6 +49,9 @@ function Contact({ swiperslidIndex }) {
             Get in touch or shoot me an email directly on
             <b> umerdbz2k@gmail.com</b>
           </p>
+          <p style={{ color: '#ff4d4d', marginTop: '10px' }}>
+            <i>(Contact form temporarily disabled due to spam)</i>
+          </p>
         </div>
         <form className="Contact__form" ref={form} onSubmit={sendEmail}>
           <input
@@ -57,6 +61,7 @@ function Contact({ swiperslidIndex }) {
             name="user_name"
             id="Name"
             required
+            disabled // Disabled input
           />
           <input
             type="email"
@@ -67,6 +72,7 @@ function Contact({ swiperslidIndex }) {
             required
             pattern="^(?!umerdbz2k@gmail\.com$).*$"
             title="Please enter your own email"
+            disabled // Disabled input
           />
           <textarea
             name="message"
@@ -74,8 +80,14 @@ function Contact({ swiperslidIndex }) {
             id=""
             cols="30"
             required
+            disabled // Disabled textarea
           ></textarea>
-          <button className="Contact__form-btn btn-special" type="submit" disabled={toggle}>
+          <button 
+            className="Contact__form-btn btn-special" 
+            type="submit" 
+            disabled={true} // Permanently disabled button
+            style={{ cursor: 'not-allowed', opacity: 0.7 }}
+          >
             {disabled}
           </button>
         </form>
